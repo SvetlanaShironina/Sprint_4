@@ -9,8 +9,11 @@ import java.util.Set;
 import static model.Constants.*;
 
 public class MainPage {
-    private static WebDriver driver;
+
     JavascriptExecutor js = (JavascriptExecutor)driver;
+
+    private static WebDriver driver;
+
     public MainPage(WebDriver driver) {
         this.driver = driver;
     }

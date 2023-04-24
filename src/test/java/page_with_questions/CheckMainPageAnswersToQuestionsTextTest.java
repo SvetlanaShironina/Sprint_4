@@ -1,4 +1,4 @@
-package pageWithQuestions;
+package page_with_questions;
 
 import ru.praktikum_services.qa_scooter.base_test.CommonBaseTest;
 import model.MainPage;

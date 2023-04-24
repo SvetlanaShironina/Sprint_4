@@ -1,4 +1,4 @@
-package orderRegistration;
+package order_registration;
 
 import ru.praktikum_services.qa_scooter.base_test.CommonBaseTest;
 import model.OrderPage;

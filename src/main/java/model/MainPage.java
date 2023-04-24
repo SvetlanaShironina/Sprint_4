@@ -6,11 +6,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.Set;
 
-import static model.Constants.*;
+//import static model.Constants.*;
 
 public class MainPage {
-
-    JavascriptExecutor js = (JavascriptExecutor)driver;
+    //логотип самокат
+    private final By BUTTON_LOGO_SCOOTER =
+            By.xpath(".//img[@alt='Scooter']");
+    //логотип яндекс
+    private final By BUTTON_LOGO_YANDEX =
+            By.xpath("//div[@class='Header_Logo__23yGT']//a[@class='Header_LogoYandex__3TSOI']");
+    //Закрыть всплывающее окно куки
+    private final By CLOSE_POPUP_WINDOW =
+            By.xpath(".//Button[@id='rcc-confirm-button']");
+    private final JavascriptExecutor js = (JavascriptExecutor)driver;
 
     private static WebDriver driver;
 
@@ -61,10 +69,9 @@ public class MainPage {
         driver.findElement(By.id(String.format("accordion__panel-%s", answersIndex))).getText();
         return this;
     }
-    public MainPage checkTextInOpenPanel (String questionsIndex, String answersIndex, String expectedText) {
+    public void checkTextInOpenPanel (String questionsIndex, String answersIndex, String expectedText) {
         scrollPageToEndOfList();
         clickQuestionsAboutImportant(questionsIndex);
         checkAnswersAboutImportantThings(answersIndex, expectedText);
-        return null;
     }
 }

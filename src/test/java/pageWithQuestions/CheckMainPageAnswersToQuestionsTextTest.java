@@ -1,19 +1,12 @@
 package pageWithQuestions;
 
-import baseTest.CommonBaseTest;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import ru.praktikum_services.qa_scooter.base_test.CommonBaseTest;
 import model.MainPage;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
-import static model.Constants.*;
 import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
 public class CheckMainPageAnswersToQuestionsTextTest extends CommonBaseTest {
@@ -27,7 +20,7 @@ public class CheckMainPageAnswersToQuestionsTextTest extends CommonBaseTest {
         this.expectedText = expectedText;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Текст ответа на вопрос. Тестовые данные, индекс вопроса: {0} {1}")
     public static Object[][] expectedAnswersParamList() {
 
         return new Object[][]{

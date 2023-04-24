@@ -1,4 +1,4 @@
-package baseTest;
+package ru.praktikum_services.qa_scooter.base_test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import model.MainPage;
@@ -12,9 +12,8 @@ import org.openqa.selenium.edge.EdgeOptions;
 
 import java.util.concurrent.TimeUnit;
 
-import static model.Constants.PAGE_URL;
-
 public class CommonBaseTest {
+        public static final String PAGE_URL = "https://qa-scooter.praktikum-services.ru/";
         public WebDriver driver;
         @Before
         public void setUp() {

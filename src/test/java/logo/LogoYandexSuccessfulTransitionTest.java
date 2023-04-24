@@ -1,6 +1,6 @@
 package logo;
 
-import baseTest.CommonBaseTest;
+import ru.praktikum_services.qa_scooter.base_test.CommonBaseTest;;
 import model.MainPage;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;

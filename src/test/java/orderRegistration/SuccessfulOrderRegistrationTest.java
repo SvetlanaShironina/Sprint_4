@@ -1,15 +1,15 @@
 package orderRegistration;
 
-import baseTest.CommonBaseTest;
+import ru.praktikum_services.qa_scooter.base_test.CommonBaseTest;
 import model.OrderPage;
 import model.RentPage;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.openqa.selenium.By;
 
 import static org.hamcrest.CoreMatchers.containsString;
-import static model.Constants.*;
 
 @RunWith(Parameterized.class)
 public class SuccessfulOrderRegistrationTest extends CommonBaseTest {
@@ -22,6 +22,9 @@ public class SuccessfulOrderRegistrationTest extends CommonBaseTest {
     private final String period;
     private final String colourID;
     private final String text;
+    //Поп-ап об успешном создании заказа
+    public static final By ORDER_COMPLETED_IMAGE =
+            By.xpath("//div[@class='Order_Modal__YZ-d3']/div[text()='Заказ оформлен']");
 
     public SuccessfulOrderRegistrationTest(String name, String surname, String address, int metroIndex, String phone,
                                            String period, String colourID, String text) {

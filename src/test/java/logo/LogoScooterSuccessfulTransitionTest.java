@@ -1,6 +1,6 @@
 package logo;
 
-import ru.praktikum_services.qa_scooter.base_test.CommonBaseTest;;
+import ru.praktikum_services.qa_scooter.base_test.CommonBaseTest;
 import model.MainPage;
 import model.OrderPage;
 import org.junit.Test;

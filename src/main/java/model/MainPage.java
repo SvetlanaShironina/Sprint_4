@@ -6,8 +6,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.Set;
 
-//import static model.Constants.*;
-
 public class MainPage {
     //логотип самокат
     private final By BUTTON_LOGO_SCOOTER =

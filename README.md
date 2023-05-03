@@ -1,4 +1,4 @@
-# Sprint_4
+# ui_tests_qa-scooter
 ### Тестируется страница Яндекс Самоката
 
 https://qa-scooter.praktikum-services.ru/
